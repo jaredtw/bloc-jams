@@ -149,16 +149,30 @@ body.landing {
     html { font-size: 120%; }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> clearfix
 
 .clearfix::before,
 
 .clearfix::after {
+<<<<<<< HEAD
     content: " ";
+=======
+
+    content: " ";
+
+>>>>>>> clearfix
     display: table;
 }
 
 .clearfix::after {
+<<<<<<< HEAD
     clear: both
 }
 =======
 >>>>>>> checkpoint-4-responsiveness
+=======
+    clear: both;
+}
+>>>>>>> clearfix
