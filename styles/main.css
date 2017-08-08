@@ -15,13 +15,13 @@ body {
     min-height 100%; /*says the height of the body must be at minimum 100% */
 }
 
-<<<<<<< HEAD
 .navbar {
     position: relative;
     padding: 0.5rem;
     background-color: rgba(101,18,95,0.5);
     z-index: 1;
-=======
+}
+
 body.landing {
     background-color: rgb(58,23,63);
 }
@@ -29,13 +29,11 @@ body.landing {
 .navbar {
     padding: 0.5rem;
     background-color: rgb(101,18,95);
->>>>>>> checkpoint-4-responsiveness
 }
 
 .navbar .logo {
     position: relative;
     left: 2rem;
-<<<<<<< HEAD
     cursor: pointer;
 }
 
@@ -71,7 +69,6 @@ body.landing {
 .links-container .navbar-link:active {
     color: rgb(233,50,117);
     background-color: white;
-=======
 }
 
 .hero-content {
@@ -121,12 +118,15 @@ body.landing {
 .ion-iphone {
     color: rgb(233,50,117);
     font-size: 5rem;
->>>>>>> checkpoint-4-responsiveness
 }
 
 .container {
     margin: 0 auto;
     max-width: 64rem;
+}
+
+.container-narrow {
+    max-width: 56rem;
 }
 
 @media (min-width: 640px) {
@@ -148,31 +148,16 @@ body.landing {
 @media (min-width: 1024px) {
     html { font-size: 120%; }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> clearfix
 
 .clearfix::before,
 
 .clearfix::after {
-<<<<<<< HEAD
-    content: " ";
-=======
 
     content: " ";
 
->>>>>>> clearfix
     display: table;
 }
 
 .clearfix::after {
-<<<<<<< HEAD
     clear: both
 }
-=======
->>>>>>> checkpoint-4-responsiveness
-=======
-    clear: both;
-}
->>>>>>> clearfix
