@@ -46,6 +46,10 @@ body.landing {
     transition-delay: 0.2s;
 }
 
+.point:hover {
+    text-shadow: 1px 1px none #000000;
+}
+
 .point .point-title {
     font-size: 1.25rem;
 }
