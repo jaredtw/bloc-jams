@@ -30,6 +30,21 @@ var albumMarconi = {
     ]
 };
 
+var albumJared = {
+    title: 'Hello it is me',
+    artist: 'Jared Willis',
+    label: 'ME',
+    year: '1986',
+    albumArtUrl: 'assets/images/album_covers/22.png',
+    songs: [
+        { title: 'who is Jared', duration: '1:11' },
+        { title: 'where is he', duration: '5:55' },
+        { title: 'Fits in your pocket', duration: '4:44'},
+        { title: 'no he does not', duration: '3:33' },
+        { title: 'sorry', duration: '2:22'}
+    ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
        '<tr class="album-view-song-item">'
@@ -42,13 +57,13 @@ var createSongRow = function(songNumber, songName, songLength) {
     return template;
 };
 
+var albumTitle = document.getElementsByClassName('album-view-title')[0];
+var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+var albumImage = document.getElementsByClassName('album-cover-art')[0];
+var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
 var setCurrentAlbum = function(album) {
-     // #1
-     var albumTitle = document.getElementsByClassName('album-view-title')[0];
-     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
-     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
      // #2
      albumTitle.firstChild.nodeValue = album.title;
@@ -66,5 +81,16 @@ var setCurrentAlbum = function(album) {
  };
 
  window.onload = function() {
-     setCurrentAlbum(albumPicasso);
+    albumImage.addEventListener("click", function(event){
+      setCurrentAlbum(albumPicasso);
+
+      var albums = [albumPicasso, albumMarconi, albumJared];
+      var index = 1;
+      setCurrentAlbum(albums[index]);
+      index++;
+      if (index == albums.length) {
+        index = 0;
+      }
+    });
+
  };
