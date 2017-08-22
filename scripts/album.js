@@ -81,11 +81,11 @@ var setCurrentAlbum = function(album) {
  };
 
  window.onload = function() {
-    albumImage.addEventListener("click", function(event){
       setCurrentAlbum(albumPicasso);
-
       var albums = [albumPicasso, albumMarconi, albumJared];
       var index = 1;
+
+    albumImage.addEventListener("click", function(event){
       setCurrentAlbum(albums[index]);
       index++;
       if (index == albums.length) {
