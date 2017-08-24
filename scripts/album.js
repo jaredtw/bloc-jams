@@ -79,6 +79,23 @@ var setCurrentAlbum = function(album) {
          albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
      }
  };
+ var findParentByClassName = function(){
+
+        document.getElementsByClassName('album-view-song-item').addEventListener('click', function(event) {
+          if (event.target.parentElement.className === 'album-view-song-item') {
+ 	        event.target.parentElement.querySelector('.song-item-number').innerHTML = pause button
+ 	      }
+ }, true);
+
+ var findParentByClassName = function(element, targetClass) {
+    if (element) {
+        var currentParent = element.parentElement;
+        while (currentParent.className !== targetClass && currentParent.className !== null) {
+            currentParent = currentParent.parentElement;
+        }
+        return currentParent;
+    }
+};
 
 var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
 var songRows = document.getElementsByClassName('album-view-song-item');
