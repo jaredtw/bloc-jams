@@ -79,17 +79,15 @@ var setCurrentAlbum = function(album) {
          albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
      }
  };
- // var findParentByClassName = function(){
- //
- //        document.getElementsByClassName('album-view-song-item').addEventListener('click', function(event) {
- //          if (event.target.parentElement.className === 'album-view-song-item') {
- // 	        event.target.parentElement.querySelector('.song-item-number').innerHTML = pauseButtonTemplate;
- // 	      }
- // }, true);
 
  var findParentByClassName = function(element, targetClass) {
     if (element) {
         var currentParent = element.parentElement;
+        if (currentParent === null) {
+            console.log("No parent found.");
+        } if else (currentParent.className === null) {
+            console.log("No parent found with that class name.");
+        }
         while (currentParent.className !== targetClass && currentParent.className !== null) {
             currentParent = currentParent.parentElement;
         }
@@ -145,7 +143,11 @@ window.onload = function() {
 
       songListContainer.addEventListener('mouseover', function(event) {
         if (event.target.parentElement.className === 'album-view-song-item') {
-          event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+                event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+                var songItem = getSongItem(event.target);
+                if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
+                      songItem.innerHTML = playButtonTemplate;
+           }
         }
       });
 
