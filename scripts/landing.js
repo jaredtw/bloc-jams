@@ -7,11 +7,11 @@ var animatePoints = function() {
       });
     };
 
-    $each($('.point'), revealPoint);
+    $.each($('.point'), revealPoint);
 };
 
-$(window).load = function() {
-    //Automatically animate the points on a tall screen where scrolling can't trigger the animation
+$(window).load(function() {
+
     if ($(window).height() > 950) {
       animatePoints();
     }
