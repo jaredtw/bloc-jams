@@ -57,13 +57,13 @@ var createSongRow = function(songNumber, songName, songLength) {
     return $(template);
 };
 
-var $albumTitle = $('.album-view-title');
-var $albumArtist = $('.album-view-artist');
-var $albumReleaseInfo = $('.album-view-release-info')];
-var $albumImage = $('.album-cover-art');
-var $albumSongList = $('.album-view-song-list');
-
 var setCurrentAlbum = function(album) {
+
+  var $albumTitle = $('.album-view-title');
+  var $albumArtist = $('.album-view-artist');
+  var $albumReleaseInfo = $('.album-view-release-info');
+  var $albumImage = $('.album-cover-art');
+  var $albumSongList = $('.album-view-song-list');
 
      // #2
      $albumTitle.text(album.title);
